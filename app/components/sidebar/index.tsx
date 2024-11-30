@@ -5,12 +5,9 @@ import Image from "next/image";
 import { Menu } from "./menu";
 import { Social } from "./social";
 import { Strings } from "@/app/strings";
-import { useLanguageContext } from "@/app/contexts/language/language.context";
 import { oswald } from "@/app/fonts";
 
 export const Sidebar = () => {
-  const { selectedLang } = useLanguageContext();
-
   return (
     <div
       className={`flex flex-col w-1/5 h-full px-5 py-10 bg-black text-white ${oswald.className}`}
@@ -28,7 +25,7 @@ export const Sidebar = () => {
         <div className="text-center">
           <p className="text-center text-xl">ARTHUR OLMOS WOSNIAKI</p>
           <p className="text-center">
-            {Strings.menu.profile.position[selectedLang]}
+            {/* {Strings.menu.profile.position[selectedLang]} */}
           </p>
         </div>
       </div>

@@ -1,20 +1,17 @@
 "use client";
 
-import { useLanguageContext } from "@/app/contexts/language/language.context";
-import { LangsEnum } from "@/app/contexts/language/languages.enum";
 import { oswald } from "@/app/fonts";
+import { Strings } from "@/app/strings";
 import Link from "next/link";
 import React from "react";
 
 export const Topbar = () => {
-  const { selectedLang } = useLanguageContext();
-
   return (
     <div
-      className={`w-full bg-black flex justify-end items-center py-3 px-5 gap-2 text-white ${oswald.className}`}
+      className={`w-full flex justify-end items-center py-3 px-5 gap-2  ${oswald.className}`}
     >
-      LANGUAGE:
-      <Link
+      {/* {Strings.menu.language[selectedLang]}: */}
+      {/* <Link
         href={{
           query: `lang=${LangsEnum.en}`,
         }}
@@ -36,7 +33,7 @@ export const Topbar = () => {
         }`}
       >
         BR
-      </Link>
+      </Link> */}
     </div>
   );
 };

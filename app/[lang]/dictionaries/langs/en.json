@@ -1,0 +1,17 @@
+{
+  "menu": {
+    "language": "Language",
+    "profile": {
+      "position": "JS Fullstack Developer"
+    },
+    "items": {
+      "home": "Home",
+      "about": "About Me",
+      "portfolio": "Portfolio"
+    }
+  },
+  "home": {
+    "title": "Hello! I am Arthur.",
+    "subtitle": "Fullstack JS Developer."
+  }
+}

@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { useLanguageContext } from "@/app/contexts/language/language.context";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -11,7 +10,6 @@ interface Props {
 }
 
 export const MenuItem = ({ title, link }: Props) => {
-  const { selectedLang } = useLanguageContext();
   const pathname = usePathname();
 
   const selected = link === pathname;
@@ -22,9 +20,9 @@ export const MenuItem = ({ title, link }: Props) => {
         selected && "text-green"
       }`}
     >
-      <Link href={{ pathname: link, query: { lang: selectedLang } }}>
+      {/* <Link href={{ pathname: link, query: { lang: selectedLang } }}>
         {title}
-      </Link>
+      </Link> */}
     </li>
   );
 };
