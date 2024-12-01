@@ -1,9 +1,9 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { SocialItem } from "./social-item";
+import SocialItem from "./social-item";
 
-export const Social = () => {
+export default function Social() {
   return (
     <nav>
       <ul className="flex justify-center gap-8 *:inline-block">
@@ -19,4 +19,4 @@ export const Social = () => {
       </ul>
     </nav>
   );
-};
+}

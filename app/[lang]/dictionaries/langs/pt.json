@@ -5,10 +5,10 @@
       "position": "Desenvolvedor Fullstack JS"
     },
     "items": {
-      "home": "Inicio"
-    },
-    "about": "Sobre Mim",
-    "portfolio": "Portfolio"
+      "home": "Inicio",
+      "about": "Sobre Mim",
+      "portfolio": "Portfolio"
+    }
   },
   "home": {
     "title": "Olá! Eu sou o Arthur.",

@@ -1,24 +1,22 @@
-export enum LangsEnum {
-  "pt" = "pt",
-  "en" = "en",
+export enum LocalesEnum {
+  "pt-BR" = "pt-BR",
+  "en-US" = "en-US",
 }
 
-export type Dictorionary = {
-  [key in LangsEnum]: {
-    menu: {
-      language: string;
-      profile: {
-        position: string;
-      };
-      items: {
-        home: string;
-        about: string;
-        portfolio: string;
-      };
+export type Dictionary = {
+  menu: {
+    language: string;
+    profile: {
+      position: string;
     };
-    home: {
-      title: string;
-      subtitle: string;
+    items: {
+      home: string;
+      about: string;
+      portfolio: string;
     };
+  };
+  home: {
+    title: string;
+    subtitle: string;
   };
 };

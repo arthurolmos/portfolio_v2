@@ -9,10 +9,13 @@ interface Props {
   link: string;
 }
 
-export const MenuItem = ({ title, link }: Props) => {
+export default function MenuItem({ title, link }: Props) {
   const pathname = usePathname();
+  const splitPathname = pathname.split("/").filter((path) => path);
+  const selectedLang = splitPathname[0];
+  const pathnameWithoutLang = splitPathname.slice(1).join("/");
 
-  const selected = link === pathname;
+  const selected = link === `/${pathnameWithoutLang}/`;
 
   return (
     <li
@@ -20,9 +23,7 @@ export const MenuItem = ({ title, link }: Props) => {
         selected && "text-green"
       }`}
     >
-      {/* <Link href={{ pathname: link, query: { lang: selectedLang } }}>
-        {title}
-      </Link> */}
+      <Link href={`/${selectedLang}${link}`}>{title}</Link>
     </li>
   );
-};
+}

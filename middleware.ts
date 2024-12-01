@@ -1,9 +1,23 @@
 import { NextRequest, NextResponse } from "next/server";
+import { LocalesEnum } from "./app/[lang]/dictionaries/types";
+import { match } from "@formatjs/intl-localematcher";
+import Negotiator from "negotiator";
 
-let locales = ["en-US", "pt-BR"];
+const locales = Object.values(LocalesEnum);
 
-function getDefaultLocale() {
-  return locales[1];
+function getLocale(request: NextRequest) {
+  const acceptLanguageKey = "accept-language";
+  const acceptLanguageHeader = request.headers.get(acceptLanguageKey) as string;
+
+  const languages = new Negotiator({
+    headers: {
+      [acceptLanguageKey]: acceptLanguageHeader,
+    },
+  }).languages();
+
+  const defaultLocale = LocalesEnum["en-US"];
+
+  return match(languages, locales, defaultLocale);
 }
 
 export function middleware(request: NextRequest) {
@@ -16,7 +30,7 @@ export function middleware(request: NextRequest) {
   if (pathnameHasLocale) return;
 
   // Redirect if there is no locale
-  const locale = getDefaultLocale();
+  const locale = getLocale(request);
   request.nextUrl.pathname = `/${locale}${pathname}`;
   // e.g. incoming request is /products
   // The new URL is now /en-US/products
