@@ -29,7 +29,7 @@ export default async function RootLayout({
         <div className="flex h-screen">
           <Sidebar dict={dict} />
 
-          <div className={`w-full ${roboto.className}`}>
+          <div className={`w-full ${roboto.className} overflow-auto`}>
             <Topbar dict={dict} />
             <main>{children}</main>
           </div>

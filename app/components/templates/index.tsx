@@ -5,12 +5,12 @@ interface Props {
   children: React.ReactNode;
 }
 
-export const DefaultTemplate = ({ title, children }: Props) => {
+export default function DefaultTemplate({ title, children }: Props) {
   return (
-    <div>
+    <div className="p-5">
       <h1>{title}</h1>
 
       {children}
     </div>
   );
-};
+}

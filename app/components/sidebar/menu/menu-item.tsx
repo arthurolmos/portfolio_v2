@@ -15,7 +15,8 @@ export default function MenuItem({ title, link }: Props) {
   const selectedLang = splitPathname[0];
   const pathnameWithoutLang = splitPathname.slice(1).join("/");
 
-  const selected = link === `/${pathnameWithoutLang}/`;
+  const linkWithoutSlashes = link.replace(/\//g, "");
+  const selected = linkWithoutSlashes === pathnameWithoutLang;
 
   return (
     <li

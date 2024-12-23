@@ -13,5 +13,30 @@
   "home": {
     "title": "Olá! Eu sou o Arthur.",
     "subtitle": "Desenvolvedor JS Fullstack."
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "sections": [
+      {
+        "title": "PESSOAL",
+        "body": [
+          "Meu nome é Arthur, tenho 36 anos e moro em São Paulo/Brasil. Sou casado e pai de pet com muito orgulho (foto ao lado com meu bebê Aleluia)."
+        ]
+      },
+      {
+        "title": "PROFISSIONAL",
+        "body": [
+          "Sou desenvolvedor JavaScript/TypeScript fullstack formado em Análise e Desenvolvimento de Sistemas pela FATEC - São Caetano do Sul. Comecei minha carreira na área de programação por volta de 2019, me especializando em React, React Native e NodeJS.",
+          "Domino os principais frameworks React, React Native e Node utilizados atualmente (NextJS, Expo e NestJS), além das principais tecnologias cloud (AWS, Firebase, Heroku) e as principais databases (Microsoft SQL, MongoDB, Postgres, Redis, DynamoDB, RDS).",
+          "Desde dezembro/2021 estou trabalhando como desenvolvedor fullstack na",
+          ", alocado fulltime em projetos externos da empresa."
+        ]
+      },
+      {
+        "title": "HOBBIES",
+        "body": ["Academia", "Video Game (Fanboy da Nintendo e FROMSoftware)"]
+      }
+    ],
+    "image": "Eu e o Aleluia."
   }
 }

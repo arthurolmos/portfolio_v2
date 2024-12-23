@@ -1,4 +1,4 @@
-import { DefaultTemplate } from "@/app/components/templates";
+import DefaultTemplate from "@/app/components/templates";
 import React from "react";
 
 interface Props {
@@ -6,5 +6,9 @@ interface Props {
 }
 
 export default function AboutTemplate({ children }: Props) {
-  return <DefaultTemplate title={"Sobre Mim"}>{children}</DefaultTemplate>;
+  return (
+    <DefaultTemplate key={"about-template"} title={"Sobre Mim"}>
+      {children}
+    </DefaultTemplate>
+  );
 }
