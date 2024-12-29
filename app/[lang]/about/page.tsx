@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { SectionItem } from "./components/section-item";
+import { SectionItem } from "./section-item";
 import { getDictionary } from "../dictionaries";
 import { LocalesEnum } from "../dictionaries/types";
 

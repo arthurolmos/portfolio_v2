@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "../globals.css";
-import Sidebar from "../components/sidebar";
-import Topbar from "../components/topbar";
+import Sidebar from "./components/sidebar";
+import Topbar from "./components/topbar";
 import { roboto } from "../fonts";
 import { getDictionary } from "./dictionaries";
 import { LocalesEnum } from "./dictionaries/types";

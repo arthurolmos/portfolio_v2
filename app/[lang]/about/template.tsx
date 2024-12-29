@@ -1,4 +1,4 @@
-import DefaultTemplate from "@/app/components/templates";
+import DefaultTemplate from "@/app/[lang]/components/templates";
 import React from "react";
 
 interface Props {
