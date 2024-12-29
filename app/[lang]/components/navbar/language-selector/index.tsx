@@ -12,7 +12,7 @@ interface Props {
   };
 }
 
-export default function Topbar({ dict }: Props) {
+export default function LanguageSelector({ dict }: Props) {
   const pathname = usePathname();
   const splitPathname = pathname.split("/").filter((path) => path);
   const selectedLang = splitPathname[0];
@@ -21,9 +21,7 @@ export default function Topbar({ dict }: Props) {
   const locales = Object.values(LocalesEnum);
 
   return (
-    <div
-      className={`w-full flex justify-end items-center py-3 px-5 gap-2  ${oswald.className}`}
-    >
+    <div className={`flex justify-end items-center gap-2 ${oswald.className}`}>
       {dict.menu.language}:
       <Link
         href={`/${locales[0]}/${pathnameWithoutLang}/`}

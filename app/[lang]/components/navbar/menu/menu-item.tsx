@@ -20,7 +20,7 @@ export default function MenuItem({ title, link }: Props) {
 
   return (
     <li
-      className={`cursor-pointer hover:text-green transition-colors text-center uppercase ${
+      className={`inline cursor-pointer hover:text-green transition-colors text-center uppercase ${
         selected && "text-green"
       }`}
     >

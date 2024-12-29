@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
-import Sidebar from "./components/sidebar";
-import Topbar from "./components/topbar";
+import Navbar from "./components/navbar";
 import { roboto } from "../fonts";
 import { getDictionary } from "./dictionaries";
 import { LocalesEnum } from "./dictionaries/types";
@@ -25,14 +24,11 @@ export default async function RootLayout({
 
   return (
     <html>
-      <body className="h-screen">
-        <div className="flex h-screen">
-          <Sidebar dict={dict} />
+      <body className="flex flex-col h-screen">
+        <Navbar dict={dict} />
 
-          <div className={`w-full ${roboto.className} overflow-auto`}>
-            <Topbar dict={dict} />
-            <main>{children}</main>
-          </div>
+        <div className={`w-full ${roboto.className} overflow-auto`}>
+          <main>{children}</main>
         </div>
       </body>
     </html>
