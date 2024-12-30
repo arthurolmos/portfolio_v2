@@ -26,7 +26,7 @@ export const stacks: StackSectionType = {
       { title: "React Native", src: "/images/react-logo.svg" },
       { title: "Expo", src: "/images/expo-logo.svg" },
     ],
-    others: ["Google Play & App Store", "Push Notifications"],
+    others: ["Google Play & App Store", "Push Notifications", "Geolocation"],
   },
   backend: {
     name: "Back-end",
@@ -34,7 +34,7 @@ export const stacks: StackSectionType = {
       { title: "NodeJS", src: "/images/nodejs-logo.svg" },
       { title: "NestJS", src: "/images/nestjs-logo.svg" },
     ],
-    others: ["Serverless", "Lambda"],
+    others: ["Express", "Serverless", "Lambda", "GraphQL"],
   },
   "cloud-and-it": {
     name: "Cloud & IT",
@@ -42,7 +42,9 @@ export const stacks: StackSectionType = {
       { title: "AWS", src: "/images/aws-logo.svg" },
       { title: "Firebase", src: "/images/firebase-logo.svg" },
       { title: "Heroku", src: "/images/heroku-logo.svg" },
+      { title: "Docker", src: "/images/docker-logo.svg" },
     ],
+    others: ["EC2", "S3", "RDS"],
   },
   databases: {
     name: "Databases",

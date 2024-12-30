@@ -16,7 +16,6 @@
     "subtitle": "Fullstack JS Developer."
   },
   "about": {
-    "title": "About Me",
     "sections": [
       {
         "title": "PERSONAL",
@@ -40,7 +39,9 @@
     ],
     "image": "Me and Hallelujah."
   },
+  "portfolio": {},
   "stacks": {
+    "title": "Stacks",
     "categories": {
       "frontend": "Front-end",
       "backend": "Back-end",

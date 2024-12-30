@@ -16,7 +16,6 @@
     "subtitle": "Desenvolvedor JS Fullstack."
   },
   "about": {
-    "title": "Sobre Mim",
     "sections": [
       {
         "title": "PESSOAL",
@@ -40,6 +39,7 @@
     ],
     "image": "Eu e o Aleluia."
   },
+  "portfolio": {},
   "stacks": {
     "categories": {
       "frontend": "Front-end",

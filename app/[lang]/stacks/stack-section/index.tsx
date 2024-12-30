@@ -17,9 +17,11 @@ export const StackSection = ({ stack }: Props) => {
         ))}
       </div>
 
-      <div className="flex gap-8 mb-8">
+      <div className="flex gap-8 mb-8 items-center justify-center">
         {others?.map((otherItem) => (
-          <p key={otherItem}>{otherItem}</p>
+          <p className="drop-shadow-md" key={otherItem}>
+            {otherItem}
+          </p>
         ))}
       </div>
     </section>
