@@ -7,7 +7,8 @@
     "items": {
       "home": "Home",
       "about": "About Me",
-      "portfolio": "Portfolio"
+      "portfolio": "Portfolio",
+      "stacks": "Stacks"
     }
   },
   "home": {
@@ -38,5 +39,14 @@
       }
     ],
     "image": "Me and Hallelujah."
+  },
+  "stacks": {
+    "categories": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "mobile": "Mobile",
+      "cloud-and-it": "Cloud & IT",
+      "databases": "Databases"
+    }
   }
 }

@@ -20,6 +20,22 @@ export default {
         "gray-dark": "#273444",
         gray: "#8492a6",
         "gray-light": "#d3dce6",
+        transparent: "rgba(255, 255, 255, 0.4)",
+      },
+      keyframes: {
+        "fade-in": {
+          from: {
+            opacity: "0",
+            transform: "translateX(-1%)",
+          },
+          to: {
+            opacity: "100",
+            transform: "translateX(0)",
+          },
+        },
+      },
+      animation: {
+        "fade-in": "fade-in .5s ease-in-out",
       },
     },
   },

@@ -12,7 +12,10 @@ body {
 
 h1 {
   font-size: xx-large;
-  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: x-large;
 }
 
 i,

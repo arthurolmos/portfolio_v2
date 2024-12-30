@@ -3,7 +3,7 @@ import "../globals.css";
 import Navbar from "./components/navbar";
 import { roboto } from "../fonts";
 import { getDictionary } from "./dictionaries";
-import { LocalesEnum } from "./dictionaries/types";
+import { Locales } from "./dictionaries/types";
 
 export const metadata: Metadata = {
   title: "Arthur Wosniaki Online Resume",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 interface Props {
   children: React.ReactNode;
-  params: Promise<{ lang: keyof typeof LocalesEnum }>;
+  params: Promise<{ lang: keyof typeof Locales }>;
 }
 
 export default async function RootLayout({

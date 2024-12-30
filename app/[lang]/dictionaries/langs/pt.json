@@ -7,7 +7,8 @@
     "items": {
       "home": "Inicio",
       "about": "Sobre Mim",
-      "portfolio": "Portfolio"
+      "portfolio": "Portfolio",
+      "stacks": "Stacks"
     }
   },
   "home": {
@@ -38,5 +39,14 @@
       }
     ],
     "image": "Eu e o Aleluia."
+  },
+  "stacks": {
+    "categories": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "mobile": "Mobile",
+      "cloud-and-it": "Cloud & IT",
+      "databases": "Banco de Dados"
+    }
   }
 }

@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
-import { LocalesEnum } from "./app/[lang]/dictionaries/types";
+import { Locales } from "./app/[lang]/dictionaries/types";
 import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 
-const locales = Object.values(LocalesEnum);
+const locales = Object.values(Locales).map((locale) => locale.key);
 
 function getLocale(request: NextRequest) {
   const acceptLanguageKey = "accept-language";
@@ -15,7 +15,7 @@ function getLocale(request: NextRequest) {
     },
   }).languages();
 
-  const defaultLocale = LocalesEnum["en-US"];
+  const defaultLocale = Locales["en-US"].key;
 
   return match(languages, locales, defaultLocale);
 }

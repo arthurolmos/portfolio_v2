@@ -1,7 +1,13 @@
-export enum LocalesEnum {
-  "pt-BR" = "pt-BR",
-  "en-US" = "en-US",
-}
+export const Locales = {
+  "pt-BR": {
+    key: "pt-BR",
+    value: "PT",
+  },
+  "en-US": {
+    key: "en-US",
+    value: "EN",
+  },
+};
 
 export type Dictionary = {
   menu: {

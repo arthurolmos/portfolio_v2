@@ -1,47 +1,46 @@
 "use client";
 
-import { LocalesEnum } from "@/app/[lang]/dictionaries/types";
+import { Locales } from "@/app/[lang]/dictionaries/types";
+import { DictType } from "@/app/[lang]/types";
 import { oswald } from "@/app/fonts";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
 interface Props {
-  dict: {
-    [key: string]: any;
-  };
+  dict: DictType;
 }
 
-export default function LanguageSelector({ dict }: Props) {
+export const LanguageSelector = ({ dict }: Props) => {
   const pathname = usePathname();
   const splitPathname = pathname.split("/").filter((path) => path);
   const selectedLang = splitPathname[0];
   const pathnameWithoutLang = splitPathname.slice(1).join("/");
 
-  const locales = Object.values(LocalesEnum);
+  const locales = Object.values(Locales);
 
   return (
     <div className={`flex justify-end items-center gap-2 ${oswald.className}`}>
       {dict.menu.language}:
       <Link
-        href={`/${locales[0]}/${pathnameWithoutLang}/`}
+        href={`/${locales[0].key}/${pathnameWithoutLang}/`}
         shallow={true}
         className={`cursor-pointer hover:text-green transition-colors ${
-          selectedLang === locales[0] && "text-green"
+          selectedLang === locales[0].key && "text-green"
         }`}
       >
-        {locales[0]}
+        {locales[0].value}
       </Link>
       {"/"}
       <Link
-        href={`/${locales[1]}/${pathnameWithoutLang}/`}
+        href={`/${locales[1].key}/${pathnameWithoutLang}/`}
         shallow={true}
         className={`cursor-pointer hover:text-green transition-colors ${
-          selectedLang === locales[1] && "text-green"
+          selectedLang === locales[1].key && "text-green"
         }`}
       >
-        {locales[1]}
+        {locales[1].value}
       </Link>
     </div>
   );
-}
+};

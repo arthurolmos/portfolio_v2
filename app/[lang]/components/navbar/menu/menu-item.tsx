@@ -9,7 +9,7 @@ interface Props {
   link: string;
 }
 
-export default function MenuItem({ title, link }: Props) {
+export const MenuItem = ({ title, link }: Props) => {
   const pathname = usePathname();
   const splitPathname = pathname.split("/").filter((path) => path);
   const selectedLang = splitPathname[0];
@@ -27,4 +27,4 @@ export default function MenuItem({ title, link }: Props) {
       <Link href={`/${selectedLang}${link}`}>{title}</Link>
     </li>
   );
-}
+};
