@@ -1,6 +1,6 @@
 import React from "react";
 import { StackItem } from "../stack-item";
-import { StackItemType } from "../stack-item/stacks";
+import { StackItemType } from "../../types";
 
 interface Props {
   stack: StackItemType;
