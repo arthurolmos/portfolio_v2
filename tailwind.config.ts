@@ -22,6 +22,9 @@ export default {
         "gray-light": "#d3dce6",
         transparent: "rgba(255, 255, 255, 0.4)",
       },
+      fontFamily: {
+        "item-title": ["Oswald", "sans-serif"],
+      },
       keyframes: {
         "fade-in": {
           from: {

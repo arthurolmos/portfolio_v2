@@ -19,18 +19,11 @@
     "sections": [
       {
         "title": "PERSONAL",
-        "body": [
-          "My name is Arthur, I'm 36 and currently living in São Paulo/Brazil. I'm married and a proud pet father (picture with my baby Hallelujah)."
-        ]
+        "body": "My name is Arthur, I'm 36 and currently living in São Paulo/Brazil. I'm married and a proud pet father (picture with my baby Hallelujah)."
       },
       {
         "title": "PROFISSIONAL",
-        "body": [
-          "I'm a JavaScript/TypeScript fullstack developer with a degree in System Analysis and Development from FATEC - São Caetano do Sul. I started my career around 2019, specializing in React, React Native and NodeJS.",
-          "I'm an expert in the currently most popular React, React Native and Node frameworks (NextJS, Expo and NestJS), and possess a strong understanding of cloud technologies (AWS, Firebase, Harness, and Heroku), as well as experience with various databases (Microsoft SQL, MongoDB, Postgres, Redis, DynamoDB, RDS).",
-          "Since December/2021 I'm working as a fullstack developer at",
-          ", allocated fulltime in external clients."
-        ]
+        "body": "<p>I'm a JavaScript/TypeScript fullstack developer with a degree in System Analysis and Development from FATEC - São Caetano do Sul. I started my career around 2019, specializing in React, React Native and NodeJS.</p><p>I'm an expert in the currently most popular React, React Native and Node frameworks (NextJS, Expo and NestJS), and possess a strong understanding of cloud technologies (AWS, Firebase, Harness, and Heroku), as well as experience with various databases (Microsoft SQL, MongoDB, Postgres, Redis, DynamoDB, RDS).</p><p>Since December/2021 I'm working as a fullstack developer at <a href='https://www.scrumlaunch.com/' target='_blank'>Scrumlaunch</a>, allocated fulltime in external clients.</p>"
       },
       {
         "title": "HOBBIES",
@@ -39,7 +32,30 @@
     ],
     "image": "Me and Hallelujah."
   },
-  "portfolio": {},
+  "portfolio": {
+    "items": [
+      {
+        "name": "ChuckTCG App",
+        "description": "",
+        "src": ["/videos/chucktcg.mp4", "video/mp4"],
+        "type": "mobile",
+        "urls": [
+          "https://play.google.com/store/apps/details?id=com.chucktcgapp",
+          "https://apps.apple.com/us/app/chucktcg-app/id1669979836"
+        ]
+      },
+      {
+        "name": "ChuckTCG App",
+        "description": "",
+        "src": ["/videos/chucktcg.mp4", "video/mp4"],
+        "type": "mobile",
+        "urls": [
+          "https://play.google.com/store/apps/details?id=com.chucktcgapp",
+          "https://apps.apple.com/us/app/chucktcg-app/id1669979836"
+        ]
+      }
+    ]
+  },
   "stacks": {
     "categories": {
       "frontend": "Front-end",

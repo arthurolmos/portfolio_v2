@@ -1,41 +1,78 @@
 import React from "react";
 import { MobilePreview } from "../../components/mobile-preview";
-import { DictType } from "../../types";
+import { PortfolioItemType } from "../../types";
+import Image from "next/image";
 
 interface Props {
   index: number;
-  item: any;
-  dict: DictType;
+  item: PortfolioItemType;
 }
 
 export const PortfolioItem = async ({ index, item }: Props) => {
   const delay = index * 0.2;
 
-  const { name, description, src, type, urls } = item;
+  const { name, description, src, type, urls, stack } = item;
 
   return (
     <>
       <div
-        className={`flex gap-6 animate-fade-in opacity-0 rounded shadow-lg p-4`}
+        className={`flex gap-6 animate-fade-in opacity-0 rounded-lg shadow-lg p-4 bg-white`}
         style={{
           animationDelay: `${delay}s`,
         }}
       >
-        <div className="flex flex-col w-4/5">
-          <h3>{name}</h3>
+        <div className="flex flex-col w-4/5 gap-4">
+          <h2 className="font-item-title mb-2">{name}</h2>
 
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla
-            eaque cupiditate consequuntur consectetur enim velit error beatae,
-            provident, molestiae, quae dolor? Nihil a nesciunt iste rerum
-            quisquam porro autem laudantium.
-          </p>
+          <div
+            dangerouslySetInnerHTML={{ __html: description }}
+            className="[&>ul]:list-disc [&>ul]:pl-5"
+          />
+
+          <div className="flex-col">
+            <b>Stack:</b>
+            <ul className="flex gap-4">
+              {stack.map((stackItem) => (
+                <li>{stackItem}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="flex-col">
+            <b>Disponível em:</b>
+            <ul className="flex gap-4">
+              {urls.map((url) => (
+                <li>
+                  <a
+                    className="cursor-pointer hover:text-green transition-colors inline-flex gap-2"
+                    href={url.url}
+                    target="_blank"
+                  >
+                    {url.logo && (
+                      <Image
+                        src={url.logo}
+                        alt={`${url.name}-logo`}
+                        width={20}
+                        height={20}
+                        className="hover:text-green"
+                        style={{
+                          objectFit: "contain",
+                          fill: "green",
+                          color: "green",
+                        }}
+                      />
+                    )}
+
+                    {url.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div>
-          {type === "mobile" && (
-            <MobilePreview src="/videos/chucktcg.mp4" type="video/mp4" />
-          )}
+          {type === "mobile" && <MobilePreview src={src[0]} type={src[1]} />}
           {type !== "mobile" && <div>default</div>}
         </div>
       </div>

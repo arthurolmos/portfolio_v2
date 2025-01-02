@@ -17,37 +17,28 @@ export default async function About({ params }: Props) {
       <div className="relative flex gap-6">
         <div className="flex flex-col gap-6 w-4/5 animate-fade-in">
           <SectionItem title={dict.about.sections[0].title}>
-            <p className="text-justify">{dict.about.sections[0].body[0]}</p>
+            <p className="text-justify">{dict.about.sections[0].body}</p>
           </SectionItem>
 
           <SectionItem title={dict.about.sections[1].title}>
-            <p className="text-justify">{dict.about.sections[1].body[0]}</p>
-
-            <p className="text-justify">{dict.about.sections[1].body[1]}</p>
-
-            <p className="text-justify">
-              {dict.about.sections[1].body[2]}{" "}
-              <a
-                href="https://www.scrumlaunch.com/"
-                target="_blank"
-                className="hover:text-green font-bold"
-              >
-                Scrumlaunch
-              </a>
-              {dict.about.sections[1].body[3]}
-            </p>
+            <div
+              className="[&>p]:text-justify [&>p>a:hover]:text-green [&>p>a]:font-bold [&>p>a]:transition-colors"
+              dangerouslySetInnerHTML={{
+                __html: dict.about.sections[1].body,
+              }}
+            />
           </SectionItem>
 
           <SectionItem title={dict.about.sections[2].title}>
             <ul className="list-disc pl-5">
-              {dict.about.sections[2].body.map((item) => (
+              {(dict.about.sections[2].body as string[]).map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           </SectionItem>
         </div>
 
-        <div className="flex flex-col items-center shadow-md p-2 h-4/5">
+        <div className="flex flex-col items-center shadow-md p-2 h-4/5 bg-white">
           <Image
             alt="Eu e o Aleluia"
             src={"/images/aleluia.jpg"}

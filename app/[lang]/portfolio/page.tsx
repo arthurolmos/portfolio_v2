@@ -1,12 +1,15 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { useParams } from "next/navigation";
+import React from "react";
+import { Locales } from "../dictionaries/types";
+import { getDictionary } from "../dictionaries";
+import { PortfolioContainer } from "./portfolio-container";
 
-export default async function Portfolio() {
-  const { lang } = useParams();
+interface Props {
+  params: Promise<{ lang: keyof typeof Locales }>;
+}
 
-  // );
+export default async function Portfolio({ params }: Props) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
 
-  return (
-    <>{/* <div className="flex flex-col gap-6">{portfolioItems}</div> */}</>
-  );
+  return <PortfolioContainer dict={dict} />;
 }

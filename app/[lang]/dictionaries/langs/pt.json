@@ -25,12 +25,7 @@
       },
       {
         "title": "PROFISSIONAL",
-        "body": [
-          "Sou desenvolvedor JavaScript/TypeScript fullstack formado em Análise e Desenvolvimento de Sistemas pela FATEC - São Caetano do Sul. Comecei minha carreira na área de programação por volta de 2019, me especializando em React, React Native e NodeJS.",
-          "Domino os principais frameworks React, React Native e Node utilizados atualmente (NextJS, Expo e NestJS), além das principais tecnologias cloud (AWS, Firebase, Heroku) e as principais databases (Microsoft SQL, MongoDB, Postgres, Redis, DynamoDB, RDS).",
-          "Desde dezembro/2021 estou trabalhando como desenvolvedor fullstack na",
-          ", alocado fulltime em projetos externos da empresa."
-        ]
+        "body": "<p>Sou desenvolvedor JavaScript/TypeScript fullstack formado em Análise e Desenvolvimento de Sistemas pela FATEC - São Caetano do Sul. Comecei minha carreira na área de programação por volta de 2019, me especializando em React, React Native e NodeJS.</p><p>Domino os principais frameworks React, React Native e Node utilizados atualmente (NextJS, Expo e NestJS), além das principais tecnologias cloud (AWS, Firebase, Heroku) e as principais databases (Microsoft SQL, MongoDB, Postgres, Redis, DynamoDB, RDS).</p><p>Desde dezembro/2021 estou trabalhando como desenvolvedor fullstack na <a href='https://www.scrumlaunch.com/' target='_blank'>Scrumlaunch</a>, alocado fulltime em projetos externos da empresa.</p>"
       },
       {
         "title": "HOBBIES",
@@ -39,7 +34,52 @@
     ],
     "image": "Eu e o Aleluia."
   },
-  "portfolio": {},
+  "portfolio": {
+    "items": [
+      {
+        "name": "ChuckTCG App",
+        "description": "<p>App desenvolvido para a ChuckTCG, uma das maiores lojas de card games do Brasil.</p><p>O app tem diversos recursos que facilitam tanto a vida dos jogadores quanto da loja. Alguns exemplos são:</p><ul><li>Agenda de Torneios</li><li>Comanda Virtual</li><li>Marcador de Vida</li><li>Moeda e Actions Tracker para PokémonTCG</li><li>Pontos de Fidelidade</li><li>Push Notifications personalizadas</li><li>Ranking dos Jogadores</li></ul><p>... e muito mais!</p>",
+        "src": ["/videos/chucktcg.mp4", "video/mp4"],
+        "type": "mobile",
+        "urls": [
+          {
+            "name": "Play Store",
+            "url": "https://play.google.com/store/apps/details?id=com.chucktcgapp",
+            "logo": "/images/play-store-logo.svg"
+          },
+          {
+            "name": "App Store",
+            "url": "https://apps.apple.com/us/app/chucktcg-app/id1669979836",
+            "logo": "/images/apple-logo.svg"
+          }
+        ],
+        "stack": [
+          "React Native",
+          "React (painel admin)",
+          "NestJS",
+          "GraphQL",
+          "Firebase"
+        ]
+      },
+      {
+        "name": "ChuckTCG App",
+        "description": "",
+        "src": ["/videos/chucktcg.mp4", "video/mp4"],
+        "type": "mobile",
+        "urls": [
+          "https://play.google.com/store/apps/details?id=com.chucktcgapp",
+          "https://apps.apple.com/us/app/chucktcg-app/id1669979836"
+        ],
+        "stack": [
+          "React Native",
+          "React (painel admin)",
+          "NestJS",
+          "GraphQL",
+          "Firebase"
+        ]
+      }
+    ]
+  },
   "stacks": {
     "categories": {
       "frontend": "Front-end",

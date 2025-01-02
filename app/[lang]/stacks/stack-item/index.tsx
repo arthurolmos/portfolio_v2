@@ -12,7 +12,7 @@ export const StackItem = ({ item }: Props) => {
   const { title, src } = item;
 
   return (
-    <div className="flex flex-col justify-center items-center rounded shadow-md p-4 gap-4">
+    <div className="flex flex-col justify-center items-center rounded-lg shadow-lg p-4 gap-4 bg-white">
       <div className="w-24 h-20">
         <Image
           src={src}
